@@ -16,7 +16,7 @@
 		845D9B9427E4BB4400C6DEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D9B9227E4BB4400C6DEAF /* LaunchScreen.storyboard */; };
 		845D9B9F27E4D22100C6DEAF /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9B9E27E4D22100C6DEAF /* NoteCell.swift */; };
 		845D9BA127E4D24D00C6DEAF /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9BA027E4D24D00C6DEAF /* NoteTableView.swift */; };
-		845D9BA527E4D61A00C6DEAF /* NoteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9BA427E4D61A00C6DEAF /* NoteInfo.swift */; };
+		845D9BA727E4EF2900C6DEAF /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9BA627E4EF2900C6DEAF /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		845D9B9527E4BB4400C6DEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D9B9E27E4D22100C6DEAF /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		845D9BA027E4D24D00C6DEAF /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
-		845D9BA427E4D61A00C6DEAF /* NoteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteInfo.swift; sourceTree = "<group>"; };
+		845D9BA627E4EF2900C6DEAF /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +64,17 @@
 		845D9B8327E4BB4000C6DEAF /* NotesPinkApp */ = {
 			isa = PBXGroup;
 			children = (
-				845D9B8827E4BB4000C6DEAF /* AddInfoVC.swift */,
 				845D9B8427E4BB4000C6DEAF /* AppDelegate.swift */,
 				845D9B8627E4BB4000C6DEAF /* SceneDelegate.swift */,
+				845D9B8827E4BB4000C6DEAF /* AddInfoVC.swift */,
+				845D9BA027E4D24D00C6DEAF /* NoteTableView.swift */,
+				845D9B9E27E4D22100C6DEAF /* NoteCell.swift */,
+				845D9BA627E4EF2900C6DEAF /* List.swift */,
 				845D9B8A27E4BB4000C6DEAF /* Main.storyboard */,
 				845D9B9027E4BB4400C6DEAF /* Assets.xcassets */,
 				845D9B9227E4BB4400C6DEAF /* LaunchScreen.storyboard */,
 				845D9B9527E4BB4400C6DEAF /* Info.plist */,
 				845D9B8D27E4BB4000C6DEAF /* NotesPinkApp.xcdatamodeld */,
-				845D9B9E27E4D22100C6DEAF /* NoteCell.swift */,
-				845D9BA027E4D24D00C6DEAF /* NoteTableView.swift */,
-				845D9BA427E4D61A00C6DEAF /* NoteInfo.swift */,
 			);
 			path = NotesPinkApp;
 			sourceTree = "<group>";
@@ -152,9 +152,9 @@
 			files = (
 				845D9B8927E4BB4000C6DEAF /* AddInfoVC.swift in Sources */,
 				845D9B8F27E4BB4000C6DEAF /* NotesPinkApp.xcdatamodeld in Sources */,
+				845D9BA727E4EF2900C6DEAF /* List.swift in Sources */,
 				845D9B9F27E4D22100C6DEAF /* NoteCell.swift in Sources */,
 				845D9B8527E4BB4000C6DEAF /* AppDelegate.swift in Sources */,
-				845D9BA527E4D61A00C6DEAF /* NoteInfo.swift in Sources */,
 				845D9BA127E4D24D00C6DEAF /* NoteTableView.swift in Sources */,
 				845D9B8727E4BB4000C6DEAF /* SceneDelegate.swift in Sources */,
 			);
@@ -233,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -288,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -311,6 +311,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,6 +340,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

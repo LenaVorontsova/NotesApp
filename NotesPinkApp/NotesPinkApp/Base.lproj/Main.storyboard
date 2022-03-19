@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="166" id="pyL-no-l8F" customClass="NoteCell" customModule="NotesPinkApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCellID" rowHeight="166" id="pyL-no-l8F" customClass="NoteCell" customModule="NotesPinkApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="166"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pyL-no-l8F" id="xem-4P-IoW">
@@ -52,8 +52,16 @@
                                                 <constraint firstItem="mv5-41-ZVM" firstAttribute="trailing" secondItem="xem-4P-IoW" secondAttribute="trailingMargin" id="pWg-tw-ZEv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="9k1-mb-gfC" id="n8h-Lg-9GV"/>
+                                            <outlet property="titleLabel" destination="mv5-41-ZVM" id="rqe-Ph-swJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qQd-Dr-3Ji"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DuU-ve-LGg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,6 +81,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="rFF-D5-tDR" kind="show" identifier="editNote" id="aTD-Nx-Glj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +182,9 @@
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aTD-Nx-Glj"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

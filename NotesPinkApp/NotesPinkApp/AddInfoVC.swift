@@ -1,9 +1,10 @@
 import UIKit
 import CoreData
+import Foundation
 
 class AddInfoVC: UIViewController {
     
-    var selectedNote: NoteInfoList? = nil
+    var selectedNote: List? = nil
 
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descriptionTV: UITextView!
@@ -21,8 +22,8 @@ class AddInfoVC: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         if selectedNote == nil {
-            let entity = NSEntityDescription.entity(forEntityName: "NoteInfo", in: context)
-            let newList = NoteInfoList(entity: entity!, insertInto: context)
+            let entity = NSEntityDescription.entity(forEntityName: "List", in: context)
+            let newList = List(entity: entity!, insertInto: context)
             newList.titleText = titleTF.text
             newList.detailsText = descriptionTV.text
             newList.id = notesList.count as NSNumber
@@ -35,11 +36,11 @@ class AddInfoVC: UIViewController {
                 print("Context save error")
             }
         } else {
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteInfo")
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "List")
             do {
                 let results:NSArray = try context.fetch(request) as NSArray
                 for result in results {
-                    let list = result as! NoteInfoList
+                    let list = result as! List
                     if list == selectedNote {
                         list.titleText = titleTF.text
                         list.detailsText = descriptionTV.text
@@ -58,11 +59,11 @@ class AddInfoVC: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteInfo")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "List")
         do {
             let results:NSArray = try context.fetch(request) as NSArray
             for result in results {
-                let list = result as! NoteInfoList
+                let list = result as! List
                 if list == selectedNote {
                     list.deletedDate = Date()
                     try context.save()
