@@ -22,7 +22,7 @@ class AddInfoVC: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         if selectedNote == nil {
-            let entity = NSEntityDescription.entity(forEntityName: "List", in: context)
+            let entity = NSEntityDescription.entity(forEntityName: "NotesList", in: context)
             let newList = List(entity: entity!, insertInto: context)
             newList.titleText = titleTF.text
             newList.detailsText = descriptionTV.text
@@ -36,11 +36,11 @@ class AddInfoVC: UIViewController {
                 print("Context save error")
             }
         } else {
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "List")
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NotesList")
             do {
                 let results:NSArray = try context.fetch(request) as NSArray
                 for result in results {
-                    let list = result as! List
+                    let list = result as! NotesList
                     if list == selectedNote {
                         list.titleText = titleTF.text
                         list.detailsText = descriptionTV.text
@@ -59,11 +59,11 @@ class AddInfoVC: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "List")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "NotesList")
         do {
             let results:NSArray = try context.fetch(request) as NSArray
             for result in results {
-                let list = result as! List
+                let list = result as! NotesList
                 if list == selectedNote {
                     list.deletedDate = Date()
                     try context.save()

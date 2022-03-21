@@ -16,7 +16,7 @@
 		845D9B9427E4BB4400C6DEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845D9B9227E4BB4400C6DEAF /* LaunchScreen.storyboard */; };
 		845D9B9F27E4D22100C6DEAF /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9B9E27E4D22100C6DEAF /* NoteCell.swift */; };
 		845D9BA127E4D24D00C6DEAF /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9BA027E4D24D00C6DEAF /* NoteTableView.swift */; };
-		845D9BA727E4EF2900C6DEAF /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9BA627E4EF2900C6DEAF /* List.swift */; };
+		845D9BA727E4EF2900C6DEAF /* NotesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9BA627E4EF2900C6DEAF /* NotesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		845D9B9527E4BB4400C6DEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845D9B9E27E4D22100C6DEAF /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		845D9BA027E4D24D00C6DEAF /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
-		845D9BA627E4EF2900C6DEAF /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		845D9BA627E4EF2900C6DEAF /* NotesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				845D9B8827E4BB4000C6DEAF /* AddInfoVC.swift */,
 				845D9BA027E4D24D00C6DEAF /* NoteTableView.swift */,
 				845D9B9E27E4D22100C6DEAF /* NoteCell.swift */,
-				845D9BA627E4EF2900C6DEAF /* List.swift */,
+				845D9BA627E4EF2900C6DEAF /* NotesList.swift */,
 				845D9B8A27E4BB4000C6DEAF /* Main.storyboard */,
 				845D9B9027E4BB4400C6DEAF /* Assets.xcassets */,
 				845D9B9227E4BB4400C6DEAF /* LaunchScreen.storyboard */,
@@ -152,7 +152,7 @@
 			files = (
 				845D9B8927E4BB4000C6DEAF /* AddInfoVC.swift in Sources */,
 				845D9B8F27E4BB4000C6DEAF /* NotesPinkApp.xcdatamodeld in Sources */,
-				845D9BA727E4EF2900C6DEAF /* List.swift in Sources */,
+				845D9BA727E4EF2900C6DEAF /* NotesList.swift in Sources */,
 				845D9B9F27E4D22100C6DEAF /* NoteCell.swift in Sources */,
 				845D9B8527E4BB4000C6DEAF /* AppDelegate.swift in Sources */,
 				845D9BA127E4D24D00C6DEAF /* NoteTableView.swift in Sources */,
